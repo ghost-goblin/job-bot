@@ -1,7 +1,5 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from selenium.common.exceptions import StaleElementReferenceException
-from selenium.webdriver.support.ui import WebDriverWait
 import os
 import time
 from dotenv import load_dotenv
@@ -31,11 +29,3 @@ all_posts = driver.find_elements_by_class_name("job-card-container--clickable")
 for post in all_posts:
     print(post)
     post.click()
-
-# def find(driver):
-#     all_posts = driver.find_element_by_class_name("job-card-container--clickable")
-#     if all_posts:
-#         return all_posts
-#     else:
-#         return False
-
